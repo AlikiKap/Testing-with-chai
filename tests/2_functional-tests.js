@@ -108,9 +108,9 @@ Browser.site = 'http://127.0.0.1:3000';
           browser.fill('surname', 'Vespucci').then(() => {
             browser.pressButton('submit', () => {
               browser.assert.success();
-              browser.assert.text('span#name', 'Amerigo')
-              browser.assert.text('span#surname', 'Vespucci')
-              browser.assert.elements('span#dates', 1)
+              browser.assert.text('span#name', 'Amerigo', 'Response name should be Amerigo')
+              browser.assert.text('span#surname', 'Vespucci', 'Response surname should be Vespucci')
+              browser.assert.elements('span#dates', 1, 'Response dates should be one element')
               done();
             })
           })
