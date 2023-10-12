@@ -111,10 +111,10 @@ Browser.site = 'http://127.0.0.1:3000';
               browser.assert.text('span#name', 'Amerigo')
               browser.assert.text('span#surname', 'Vespucci')
               browser.assert.elements('span#dates', 1)
+              done();
             })
           })
   
-        done();
       });
     });
   });
